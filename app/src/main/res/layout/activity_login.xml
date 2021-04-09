@@ -50,12 +50,16 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Patient"
+                        android:textSize="20dp"
+                        android:textColor="#79000000"
                         android:padding="20dp"/>
                     <RadioButton
                         android:id="@+id/doctor"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Doctor"
+                        android:textSize="20dp"
+                        android:textColor="#79000000"
                         android:padding="20dp"/>
                     
                 </RadioGroup>
@@ -66,12 +70,21 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/custom_button"
                 android:text="Send OTP" />
+                android:background="@drawable/buttonstyle"
+                android:backgroundTint="#d5ecc2"
+                android:text="Send OTP"
+                android:textColor="@color/white"
+                />
 
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:layout_margin="10dp"
+        app:cardCornerRadius="15dp"
+        android:outlineSpotShadowColor="#ffd3b4"
+        android:padding="5dp"
         android:id="@+id/verifyOtpSec"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -82,6 +95,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
+            android:background="#FFFFFF"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
@@ -91,14 +105,21 @@
                 android:id="@+id/otpEditTxt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter OTP"/>
+                android:hint="Enter OTP"
+                android:padding="5dp"
+                android:textSize="30dp"
+                android:layout_margin="5dp"
+                android:textColor="#79000000"
+                android:textColorHint="#79000000"
+                android:background="@drawable/edittext_desiign"/>
 
             <Button
                 android:id="@+id/otpVerifyBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/custom_button"
-                android:text="Verify" />
+                android:text="Verify"
+                android:background="#d5ecc2"
+                android:textColor="@color/white"/>
 
         </LinearLayout>
 
