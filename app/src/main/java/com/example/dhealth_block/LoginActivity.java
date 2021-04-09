@@ -135,9 +135,13 @@ public class LoginActivity extends AppCompatActivity {
 
                 if (e instanceof FirebaseAuthInvalidCredentialsException) {
                     // Invalid request
+                    verifyotp.setVisibility(View.INVISIBLE);
+                    sendotp.setVisibility(View.VISIBLE);
                     Toast.makeText(getApplicationContext(),"Invalid request",Toast.LENGTH_SHORT).show();
                 } else if (e instanceof FirebaseTooManyRequestsException) {
                     // The SMS quota for the project has been exceeded
+                    verifyotp.setVisibility(View.INVISIBLE);
+                    sendotp.setVisibility(View.VISIBLE);
                     Toast.makeText(getApplicationContext(),"Too many logins",Toast.LENGTH_SHORT).show();
                 }
 
