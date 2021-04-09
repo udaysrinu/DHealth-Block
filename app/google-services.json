@@ -1,0 +1,85 @@
+{
+  "project_info": {
+    "project_number": "156950169855",
+    "firebase_url": "https://dmedicalhistory-default-rtdb.firebaseio.com",
+    "project_id": "dmedicalhistory",
+    "storage_bucket": "dmedicalhistory.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:156950169855:android:ae29c65c30e3e1ca0b24ca",
+        "android_client_info": {
+          "package_name": "com.example.dhealth_block"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "156950169855-4tkcfv617apgb0921c7eocvk7uen7f1b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dhealth_block",
+            "certificate_hash": "594d41103112c141f211602601a0924564188499"
+          }
+        },
+        {
+          "client_id": "156950169855-oiuotkl2oeo1g6e55gkelslk1cac2dkh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoIiGcHPzYlEh05YtORRS5y4uBh9C1BDg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "156950169855-oiuotkl2oeo1g6e55gkelslk1cac2dkh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:156950169855:android:d421ae467166fc460b24ca",
+        "android_client_info": {
+          "package_name": "com.example.dmedicalhistory"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "156950169855-uk2mhi1qgbj0ckp21sdsb6l2fohc3ep0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dmedicalhistory",
+            "certificate_hash": "594d41103112c141f211602601a0924564188499"
+          }
+        },
+        {
+          "client_id": "156950169855-oiuotkl2oeo1g6e55gkelslk1cac2dkh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoIiGcHPzYlEh05YtORRS5y4uBh9C1BDg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "156950169855-oiuotkl2oeo1g6e55gkelslk1cac2dkh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
