@@ -64,6 +64,7 @@
                 android:id="@+id/otpSendBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/custom_button"
                 android:text="Send OTP" />
 
         </LinearLayout>
@@ -96,7 +97,8 @@
                 android:id="@+id/otpVerifyBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Verify"/>
+                android:background="@drawable/custom_button"
+                android:text="Verify" />
 
         </LinearLayout>
 
