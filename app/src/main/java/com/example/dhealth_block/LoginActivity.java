@@ -20,11 +20,15 @@ import com.google.firebase.FirebaseTooManyRequestsException;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthOptions;
 import com.google.firebase.auth.PhoneAuthProvider;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.concurrent.TimeUnit;
 
@@ -149,16 +153,63 @@ public class LoginActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
 
                             if(f==0){
-
+//                                startActivity(new Intent(getApplicationContext(),PatientInfo.class));
+                                patientcheck();
+                            }else{
+                                startActivity(new Intent(getApplicationContext(),DoctorInfo.class));
+                                doctorcheck();
                             }
 
-                            startActivity(new Intent(getApplicationContext(),MainActivity.class));
+//                            startActivity(new Intent(getApplicationContext(),MainActivity.class));
                         } else {
                             if (task.getException() instanceof FirebaseAuthInvalidCredentialsException) {
                             }
                         }
                     }
                 });
+    }
+
+    private void patientcheck(){
+        ref.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                if(snapshot.child("Patient").child(FirebaseAuth.getInstance().getCurrentUser().toString()).exists()){
+                    startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                }
+                else{
+                    startActivity(new Intent(getApplicationContext(),PatientInfo.class));
+                }
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+    }
+
+    private void doctorcheck(){
+        ref.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                if(snapshot.child("Doctor").child(FirebaseAuth.getInstance().getCurrentUser().toString()).exists()){
+                    startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                }
+                else{
+//                    ref.child("Patient").child(FirebaseAuth.getInstance().getCurrentUser().toString()).setValue("1");
+                    startActivity(new Intent(getApplicationContext(),PatientInfo.class));
+                }
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
     }
 
 }
