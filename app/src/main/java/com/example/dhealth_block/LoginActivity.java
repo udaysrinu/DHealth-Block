@@ -93,13 +93,19 @@ public class LoginActivity extends AppCompatActivity {
                     verifyotp.setVisibility(View.VISIBLE);
                     sendotp.setVisibility(View.INVISIBLE);
                     String phoneNumber = "+91" + phnumberedttxt.getText().toString();
-                    PhoneAuthOptions options = PhoneAuthOptions.newBuilder(mauth)
-                            .setPhoneNumber(phoneNumber)       // Phone number to verify
-                            .setTimeout(60L, TimeUnit.SECONDS) // Timeout and unit
-                            .setActivity(com.example.dhealth_block.LoginActivity.this)                 // Activity (for callback binding)
-                            .setCallbacks(mCallbacks)          // OnVerificationStateChangedCallbacks
-                            .build();
-                    PhoneAuthProvider.verifyPhoneNumber(options);
+                    if(phnumberedttxt.getText().toString().length()==10){
+                        PhoneAuthOptions options = PhoneAuthOptions.newBuilder(mauth)
+                                .setPhoneNumber(phoneNumber)       // Phone number to verify
+                                .setTimeout(60L, TimeUnit.SECONDS) // Timeout and unit
+                                .setActivity(com.example.dhealth_block.LoginActivity.this)                 // Activity (for callback binding)
+                                .setCallbacks(mCallbacks)          // OnVerificationStateChangedCallbacks
+                                .build();
+                        PhoneAuthProvider.verifyPhoneNumber(options);
+                    }
+                    else{
+                        Toast.makeText(getApplicationContext(),"Please Enter a valid phone number",Toast.LENGTH_SHORT).show();
+                    }
+
                 }
             }
         });
@@ -129,8 +135,10 @@ public class LoginActivity extends AppCompatActivity {
 
                 if (e instanceof FirebaseAuthInvalidCredentialsException) {
                     // Invalid request
+                    Toast.makeText(getApplicationContext(),"Invalid request",Toast.LENGTH_SHORT).show();
                 } else if (e instanceof FirebaseTooManyRequestsException) {
                     // The SMS quota for the project has been exceeded
+                    Toast.makeText(getApplicationContext(),"Too many logins",Toast.LENGTH_SHORT).show();
                 }
 
                 // Show a message and update the UI
@@ -143,6 +151,16 @@ public class LoginActivity extends AppCompatActivity {
                 mResendToken = token;
             }
         };
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        if(FirebaseAuth.getInstance().getCurrentUser()!=null){
+            startActivity(new Intent(getApplicationContext(),MainActivity.class));
+        }
+
     }
 
     private void signInWithPhoneAuthCredential(PhoneAuthCredential credential) {
@@ -174,7 +192,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
-                if(snapshot.child("Patient").child(FirebaseAuth.getInstance().getCurrentUser().toString()).exists()){
+                if(snapshot.child("Patient").exists() && snapshot.child("Patient").child(FirebaseAuth.getInstance().getCurrentUser().toString()).exists()){
                     startActivity(new Intent(getApplicationContext(),MainActivity.class));
                 }
                 else{
@@ -195,11 +213,11 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
-                if(snapshot.child("Doctor").child(FirebaseAuth.getInstance().getCurrentUser().toString()).exists()){
+                if(snapshot.child("Doctor").exists() && snapshot.child("Doctor").child(FirebaseAuth.getInstance().getCurrentUser().toString()).exists()){
                     startActivity(new Intent(getApplicationContext(),MainActivity.class));
                 }
                 else{
-//                    ref.child("Patient").child(FirebaseAuth.getInstance().getCurrentUser().toString()).setValue("1");
+                    ref.child("Patient").child(FirebaseAuth.getInstance().getCurrentUser().toString()).setValue("1");
                     startActivity(new Intent(getApplicationContext(),PatientInfo.class));
                 }
 

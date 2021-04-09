@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,13 +35,13 @@ public class MainActivity extends AppCompatActivity {
                         selectedFragment=new MedicalHistoryFragment();
                         break;
                     case R.id.logout:
-                        startActivity(new Intent(getApplicationContext(), com.example.dhealth_block.LoginActivity.class));
-                        finish();
+//                        startActivity(new Intent(getApplicationContext(), com.example.dhealth_block.LoginActivity.class));
+                        FirebaseAuth.getInstance().signOut();
+                        startActivity(new Intent(getApplicationContext(),LoginActivity.class));
+//                        finish();
                         break;
                 }
-
                 getSupportFragmentManager().beginTransaction().replace(R.id.Frame_Layout,selectedFragment).commit();
-
                 return true;
             }
         });
