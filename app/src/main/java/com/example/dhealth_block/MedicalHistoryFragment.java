@@ -2,20 +2,34 @@ package com.example.dhealth_block;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import java.util.ArrayList;
+
 
 public class MedicalHistoryFragment extends Fragment {
 
     FloatingActionButton newTreatment;
-
+    private String idItem;
+    private ArrayList<Disease> DiseaseList;
+    private SwipeRefreshLayout swipeRefreshLayout;
+    private RecyclerView recyclerView;
+        //private OnFragmentInteractionListener mListener;
+    private DiseaseAdapter mAdaptador;
     public MedicalHistoryFragment() {
-        // Required empty public constructor
+
     }
 
   @Override
@@ -23,7 +37,7 @@ public class MedicalHistoryFragment extends Fragment {
         // Inflate the layout for this fragment
 //        newTreatment =
         View v=inflater.inflate(R.layout.fragment_medical_history, container, false);
-        newTreatment = v.findViewById(R.id.layout);
+        newTreatment = v.findViewById(R.id.fab);
 //        inflater.inflate(R.layout.fragment_medical_history, container, false);
         newTreatment.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,6 +45,18 @@ public class MedicalHistoryFragment extends Fragment {
                 startActivity(new Intent(getContext(), com.example.dhealth_block.NewTreatmentBegin.class));
             }
         });
+      RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getContext());
+
+      mAdaptador = new DiseaseAdapter(getContext(), DiseaseList, this);
+
+      recyclerView = (RecyclerView) v.findViewById(R.id.recyclerView);
+      recyclerView.setLayoutManager(mLayoutManager);
+      recyclerView.setItemAnimator(new DefaultItemAnimator());
+      recyclerView.addItemDecoration(new DividerItemDecoration(v.getContext(), LinearLayoutManager.VERTICAL));
+      recyclerView.setAdapter(mAdaptador);
+
+      Log.i("onCreateView","Fin");
         return v;
   }
+
 }
