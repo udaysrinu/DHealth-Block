@@ -20,7 +20,6 @@ import com.google.firebase.FirebaseTooManyRequestsException;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthOptions;
 import com.google.firebase.auth.PhoneAuthProvider;
@@ -31,6 +30,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.concurrent.TimeUnit;
+
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -70,7 +70,51 @@ public class LoginActivity extends AppCompatActivity {
         ref = database.getReference("User");
 
         usertype = findViewById(R.id.userType);
-
+//        Web3j web3j = Web3j.build(new HttpService());
+//        Testcontract testcontract  = Testcontract.load("0x70A0CF03776A69674A81cFd84c1b44b0358be8FF", web3j, Credentials.create("5e9a95da7924a002aa2a046577df38928e02378c4b4612666a969bb928670b4e"), new DefaultGasProvider());
+//        try {
+//            testcontract.set((BigInteger.TEN)).send();
+//            Log.i("cvalue","updated here");
+//            Toast.makeText(getBaseContext(),"updated",Toast.LENGTH_SHORT).show();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//        web3j.shutdown();
+//        Web3j web3 = Web3j.build(new HttpService("https://rpc-mumbai.matic.today/"));
+//        try {
+//            Web3ClientVersion clientVersion = web3.web3ClientVersion().sendAsync().get();
+//            if(!clientVersion.hasError()){
+//                Log.i("web3 req", clientVersion.getWeb3ClientVersion());
+//                BigInteger initialS = BigInteger.valueOf(100000);
+//                Testcontract testcontract  = Testcontract.load( "0x70A0CF03776A69674A81cFd84c1b44b0358be8FF",web3, Credentials.create("fdceb2fd044f75e561763842a772ef70213ac7849b3a0d28907ac7d0919ef3ca"), new DefaultGasProvider());
+//                Log.i("web3 req","moving to try");
+//                try {
+//                    Log.i("web3 req","in try");
+//
+//                    //Log.i("web3 req", testcontract.usingEmit().toString());
+//                    try{
+//                        testcontract.set((BigInteger.valueOf(65))).sendAsync();
+//                    }
+//                    catch(Exception e){
+//                        Log.i("web3 req", "onCreate: kajshdkjas");
+//                        e.printStackTrace();
+//                    }
+//                    CompletableFuture<BigInteger> x=testcontract.get().sendAsync();
+//
+//                    Log.i("web3 req", String.valueOf(x.get()));
+//                Log.i("cvalue","updated here");
+//                Toast.makeText(getBaseContext(),"updated",Toast.LENGTH_SHORT).show();
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            }
+//            }
+//            else {
+//                Toast.makeText(this,"wrong",Toast.LENGTH_LONG).show();
+//            }
+//        }
+//        catch (Exception e) {
+//            //Show Error
+//        }
         sendbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -119,6 +163,7 @@ public class LoginActivity extends AppCompatActivity {
                 String otp=otpedttxt.getText().toString();
                 PhoneAuthCredential credential = PhoneAuthProvider.getCredential(mverificationId, otp);
                 signInWithPhoneAuthCredential(credential);
+
             }
         });
 
@@ -236,5 +281,6 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
+
 
 }
