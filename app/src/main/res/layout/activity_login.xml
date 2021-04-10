@@ -21,10 +21,9 @@
     <androidx.cardview.widget.CardView
         android:background="@color/primary"
         android:id="@+id/SendOtpSec"
-        android:layout_margin="10dp"
+        android:layout_margin="20dp"
         app:cardCornerRadius="15dp"
         android:outlineSpotShadowColor="#ffd3b4"
-        android:padding="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -33,6 +32,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
+            android:padding="20dp"
             android:background="@color/primary"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -83,14 +83,11 @@
                 android:id="@+id/otpSendBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/custom_button"
-                android:text="Send OTP" />
-
-
                 android:background="@drawable/buttonstyle"
                 android:backgroundTint="@color/themeColor"
                 android:text="Send OTP"
                 android:textColor="@color/white" />
+
 
         </LinearLayout>
 

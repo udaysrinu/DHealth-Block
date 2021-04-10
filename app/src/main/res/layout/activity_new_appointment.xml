@@ -4,9 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NewAppointment">
+    tools:context=".NewAppointment"
+    android:padding="10dp">
 
     <TextView
+        android:padding="10dp"
+        android:textSize="25sp"
         android:id="@+id/diseasetxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,6 +18,8 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:padding="10dp"
+        android:textSize="18sp"
         android:id="@+id/doctortxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -29,11 +34,15 @@
         app:layout_constraintTop_toBottomOf="@+id/doctortxt">
 
         <TextView
+            android:padding="10dp"
+            android:textSize="18sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Description"/>
 
         <TextView
+            android:padding="10dp"
+            android:textSize="18sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Here will be some introduction about the disease"/>
