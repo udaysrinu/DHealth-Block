@@ -75,7 +75,7 @@
         android:textSize="18dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Addres"/>
+        android:text="Wallet Address"/>
     <EditText
         android:padding="10dp"
         android:textSize="18dp"
@@ -85,7 +85,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/edittext_desiign"
-        android:hint="Address"/>
+        android:hint="Wallet Address"/>
 
     <TextView
         android:padding="10dp"
@@ -103,6 +103,23 @@
         android:background="@drawable/edittext_desiign"
         android:layout_height="wrap_content"
         android:hint="Please Enter Aadhar Number"/>
+
+    <TextView
+        android:padding="10dp"
+        android:textSize="18dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Private Key"/>
+    <EditText
+        android:padding="10dp"
+        android:textSize="18dp"
+        android:textColor="#79000000"
+        android:textColorHint="#79000000"
+        android:id="@+id/privateKey"
+        android:layout_width="match_parent"
+        android:background="@drawable/edittext_desiign"
+        android:layout_height="wrap_content"
+        android:hint="Please Enter Private Key"/>
 
     <Button
         android:id="@+id/submitbtn"

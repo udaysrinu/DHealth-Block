@@ -15,7 +15,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class PatientInfo extends AppCompatActivity {
 
     Button submitbtn;
-    EditText address,fullname,aadhar;
+    EditText address,fullname,aadhar,privateKey;
     PatientClass patientClass;
 
     @Override
@@ -26,7 +26,7 @@ public class PatientInfo extends AppCompatActivity {
      address=findViewById(R.id.addressedttxt);
         fullname=findViewById(R.id.fullnameedtxt);
         aadhar=findViewById(R.id.aadharedttxt);
-
+        privateKey=findViewById(R.id.privateKey);
         submitbtn = findViewById(R.id.submitbtn);
 
         submitbtn.setOnClickListener(new View.OnClickListener() {
@@ -35,6 +35,7 @@ public class PatientInfo extends AppCompatActivity {
                 String addr=address.getText().toString();
                 String full=fullname.getText().toString();
                 String aadharno=aadhar.getText().toString();
+                String privateKeystr=privateKey.getText().toString();
                 patientClass=new PatientClass(full,aadharno,"asdf",addr);
                 DatabaseReference ref= FirebaseDatabase.getInstance().getReference().child("User");
                 ref.child("Patient").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(patientClass);
