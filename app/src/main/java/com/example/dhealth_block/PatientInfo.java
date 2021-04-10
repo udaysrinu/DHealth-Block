@@ -23,7 +23,7 @@ public class PatientInfo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_patient_info);
 
-        address=findViewById(R.id.addressedttxt);
+     address=findViewById(R.id.addressedttxt);
         fullname=findViewById(R.id.fullnameedtxt);
         aadhar=findViewById(R.id.aadharedttxt);
 

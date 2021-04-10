@@ -5,6 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".PatientInfo"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="30dp"
+    android:padding="25dp"
     android:orientation="vertical">
 
     <TextView
@@ -88,7 +91,7 @@
         android:layout_height="wrap_content"
         android:text="Submit"
         android:layout_gravity="center"
-        android:background="@drawable/buttonstyle"
+        android:background="@drawable/custom_button"
         android:layout_margin="20dp"
         android:padding="10dp"/>
 

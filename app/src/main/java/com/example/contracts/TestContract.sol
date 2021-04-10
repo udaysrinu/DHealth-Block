@@ -60,7 +60,7 @@ contract D_Health_Block{
     function getPatientData(uint256 _id) public{
         emit SinglePatientData(pDataList[_id]);
     }
-    function getDoctorData(uint256 _license){
+    function getDoctorData(uint256 _license)public{
         emit SingleDoctorData(dDataList[_license]);
     }
 
