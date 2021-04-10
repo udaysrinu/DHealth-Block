@@ -20,9 +20,6 @@ import com.google.firebase.auth.FirebaseAuth;
 //import org.web3j.protocol.http.HttpService;
 //import org.web3j.tx.gas.DefaultGasProvider;
 
-import java.math.BigInteger;
-
-import contracts_java.Testcontract;
 
 public class MainActivity extends AppCompatActivity {
 

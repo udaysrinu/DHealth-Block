@@ -32,12 +32,12 @@ public class PatientClass {
 //        return year;
 //    }
 
-    private String fullName, adhar,id, accountaddress;
+    private String fullName, adhar,privatekey, accountaddress;
 
     public PatientClass(String fullName, String adhar, String id, String accountaddress) {
         this.fullName = fullName;
         this.adhar = adhar;
-        this.id = id;
+        this.privatekey = id;
         this.accountaddress = accountaddress;
     }
 
@@ -50,7 +50,7 @@ public class PatientClass {
     }
 
     public String getid() {
-        return id;
+        return privatekey;
     }
 
     public String getAccountaddress() {
