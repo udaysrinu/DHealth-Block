@@ -198,7 +198,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
-                if(snapshot.child("Patient").exists() && snapshot.child("Patient").child(FirebaseAuth.getInstance().getCurrentUser().toString()).exists()){
+                if(snapshot.child("Patient").exists() && snapshot.child("Patient").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).exists()){
                     startActivity(new Intent(getApplicationContext(),MainActivity.class));
                 }
                 else{

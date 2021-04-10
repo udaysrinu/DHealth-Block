@@ -2,7 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.dhealth_block">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 
     <application
         android:allowBackup="true"
@@ -11,22 +12,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DHealth_block">
-        <activity android:name=".NewAppointment"></activity>
+        <activity android:name=".FindDoctor"></activity>
+        <activity android:name=".NewAppointment" />
         <activity android:name=".NewTreatmentBegin" />
         <activity android:name=".DoctorInfo" />
         <activity android:name=".PatientInfo" />
         <activity android:name=".LoginActivity">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>

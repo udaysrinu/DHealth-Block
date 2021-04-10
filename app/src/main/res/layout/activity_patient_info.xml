@@ -12,53 +12,75 @@
         android:layout_height="wrap_content"
         android:text="Full Name"/>
     <EditText
+        android:id="@+id/fullnameedtxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Full Name"/>
 
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Username"/>-->
+<!--    <EditText-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="Username"/>-->
+
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Gender"/>-->
+<!--    <RadioGroup-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:layout_gravity="center">-->
+
+<!--        <RadioButton-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="M"/>-->
+<!--        <RadioButton-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="F"/>-->
+<!--        <RadioButton-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="O"/>-->
+
+<!--    </RadioGroup>-->
+
+<!--    <Spinner-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="30dp"-->
+<!--        android:entries="@array/document_type"/>-->
+<!--    <Button-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@drawable/buttonstyle"-->
+<!--        android:text="Choose File"/>-->
+
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Username"/>
+        android:text="Addres"/>
     <EditText
+        android:id="@+id/addressedttxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Username"/>
+        android:hint="Address"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Gender"/>
-    <RadioGroup
+        android:text="Aadhar"/>
+    <EditText
+        android:id="@+id/aadharedttxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center">
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="M"/>
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="F"/>
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="O"/>
-
-    </RadioGroup>
-
-    <Spinner
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:entries="@array/document_type"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/custom_button"
-        android:text="Choose File"/>
+        android:hint="Please Enter Aadhar Number"/>
 
     <Button
         android:id="@+id/submitbtn"
@@ -66,7 +88,7 @@
         android:layout_height="wrap_content"
         android:text="Submit"
         android:layout_gravity="center"
-        android:background="@drawable/custom_button"
+        android:background="@drawable/buttonstyle"
         android:layout_margin="20dp"
         android:padding="10dp"/>
 
