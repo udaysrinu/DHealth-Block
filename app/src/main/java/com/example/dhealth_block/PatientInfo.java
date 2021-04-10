@@ -21,7 +21,7 @@ public class PatientInfo extends AppCompatActivity {
         submitbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), com.example.dhealth_block.DoctorInfo.class));
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
             }
         });
 
