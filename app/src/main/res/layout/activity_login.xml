@@ -70,11 +70,8 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/custom_button"
                 android:text="Send OTP" />
-                android:background="@drawable/buttonstyle"
-                android:backgroundTint="#d5ecc2"
-                android:text="Send OTP"
-                android:textColor="@color/white"
-                />
+
+
 
         </LinearLayout>
 
