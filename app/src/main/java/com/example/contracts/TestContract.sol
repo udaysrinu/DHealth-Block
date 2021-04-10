@@ -29,34 +29,41 @@ contract D_Health_Block{
         
     }
     
+    event SinglePatientData(patientData []  EventData);
+    event SingleDoctorData(patientData []  EventData);
+
+
     mapping (uint256 => bool) licenseExists;
     
     mapping(uint256 => patient) public pMap;
     mapping(uint256 => doctor) public dMap;
     
     
-    mapping(uint256 => patient[]) public pDataList;
-    mapping(uint256 => doctor[]) public dDataList;
-    
-    // patientData newData;
-    // function addPatientData(uint256 _id, string memory _doc_name, string memory _hospital, uint256 _license, uint256 _date, string memory _disease) public {
+    mapping(uint256 => patientData []) public pDataList;
+    mapping(uint256 => patientData []) public dDataList;
+
+
+    patientData public  newData;
+
+    function addPatientData(uint256 _id, string memory _doc_name, string memory _hospital, uint256 _license, uint256 _date, string memory _disease) public {
+
+        newData.name_of_doc = _doc_name;
+        newData.hospital = _hospital;
+        newData.license = _license;
+        newData.date = _date;
+        newData.disease = _disease;
         
-    //     pDataList[_id].push(patientData(
-    //         {
-    //             name_of_doc:_doc_name,
-    //             hospital:_hospital,
-    //             license:_license,
-    //             date:_date,
-    //             disease:_disease
-                
-    //         })
-    //     );
-    // }
+        pDataList[_id].push(newData);       //Accesing the patient history data list using _id -> Range of _id (0,2^256)
+        dDataList[_license].push(newData);  //Accesing the doctors history data list using his license
+    }
     
-    // function getSinglePatientData(uint256 _id) public{
-        
-    // }
-    
+    function getPatientData(uint256 _id) public{
+        emit SinglePatientData(pDataList[_id]);
+    }
+    function getDoctorData(uint256 _license){
+        emit SingleDoctorData(dDataList[_license]);
+    }
+
     patient newPatient;
     function createPatient(string memory _name,uint256 _adhar,address _account_address) public {
       

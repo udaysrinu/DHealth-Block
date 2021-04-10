@@ -4,11 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    tools:context=".LoginActivity"
+    android:background="#ffd3b4">
 
-    <ImageView
+    <com.mikhaellopez.circularimageview.CircularImageView
         android:layout_width="250dp"
         android:layout_height="250dp"
+        app:civ_border_color="@color/primary"
+        app:civ_border_width="2dp"
         app:layout_constraintBottom_toTopOf="@+id/SendOtpSec"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -16,7 +19,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.cardview.widget.CardView
+        android:background="@color/primary"
         android:id="@+id/SendOtpSec"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="15dp"
+        android:outlineSpotShadowColor="#ffd3b4"
+        android:padding="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -25,6 +33,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
+            android:background="@color/primary"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
@@ -35,7 +44,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Phone Number"
-                android:inputType="number"/>
+                android:inputType="number"
+                android:padding="5dp"
+                android:textSize="30dp"
+                android:layout_margin="5dp"
+                android:textColor="#79000000"
+                android:textColorHint="#79000000"
+                android:background="@drawable/edittext_desiign"/>
 
                 <RadioGroup
                     android:id="@+id/userType"
@@ -72,6 +87,10 @@
                 android:text="Send OTP" />
 
 
+                android:background="@drawable/buttonstyle"
+                android:backgroundTint="@color/themeColor"
+                android:text="Send OTP"
+                android:textColor="@color/white" />
 
         </LinearLayout>
 
@@ -92,7 +111,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
-            android:background="#FFFFFF"
+            android:background="@color/primary"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
@@ -115,7 +134,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Verify"
-                android:background="#d5ecc2"
+                android:background="@color/themeColor"
                 android:textColor="@color/white"/>
 
         </LinearLayout>

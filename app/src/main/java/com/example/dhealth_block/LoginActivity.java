@@ -162,7 +162,8 @@ public class LoginActivity extends AppCompatActivity {
         super.onStart();
 
         if(FirebaseAuth.getInstance().getCurrentUser()!=null){
-            startActivity(new Intent(getApplicationContext(),MainActivity.class));
+            patientcheck();
+//            startActivity(new Intent(getApplicationContext(),MainActivity.class));
         }
 
     }
@@ -178,7 +179,7 @@ public class LoginActivity extends AppCompatActivity {
 //                                startActivity(new Intent(getApplicationContext(),PatientInfo.class));
                                 patientcheck();
                             }else{
-                                startActivity(new Intent(getApplicationContext(),DoctorInfo.class));
+//                                startActivity(new Intent(getApplicationContext(),DoctorInfo.class));
                                 doctorcheck();
                             }
 
@@ -192,7 +193,8 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void patientcheck(){
-        ref.addValueEventListener(new ValueEventListener() {
+        DatabaseReference mref=FirebaseDatabase.getInstance().getReference("User");
+        mref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
@@ -213,7 +215,8 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void doctorcheck(){
-        ref.addValueEventListener(new ValueEventListener() {
+        DatabaseReference mref=FirebaseDatabase.getInstance().getReference("User");
+        mref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
@@ -221,7 +224,7 @@ public class LoginActivity extends AppCompatActivity {
                     startActivity(new Intent(getApplicationContext(),MainActivity.class));
                 }
                 else{
-                    ref.child("Patient").child(FirebaseAuth.getInstance().getCurrentUser().toString()).setValue("1");
+//                    ref.child("Patient").child(FirebaseAuth.getInstance().getCurrentUser().toString()).setValue("1");
                     startActivity(new Intent(getApplicationContext(),PatientInfo.class));
                 }
 
