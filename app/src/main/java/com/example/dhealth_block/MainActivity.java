@@ -14,11 +14,11 @@ import androidx.fragment.app.Fragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
-import org.web3j.crypto.Credentials;
-import org.web3j.protocol.Web3j;
-import org.web3j.protocol.core.methods.response.TransactionReceipt;
-import org.web3j.protocol.http.HttpService;
-import org.web3j.tx.gas.DefaultGasProvider;
+//import org.web3j.crypto.Credentials;
+//import org.web3j.protocol.Web3j;
+//import org.web3j.protocol.core.methods.response.TransactionReceipt;
+//import org.web3j.protocol.http.HttpService;
+//import org.web3j.tx.gas.DefaultGasProvider;
 
 import java.math.BigInteger;
 
@@ -34,17 +34,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         bottomNavigationView = findViewById(R.id.bottom_nav);
-        Web3j web3j = Web3j.build(new HttpService("<your_node_url>"));
-        TransactionReceipt greeting;
-        Testcontract testcontract  = Testcontract.load("your_contract_address", web3j, Credentials.create("your_private_key"), new DefaultGasProvider());
+//        Web3j web3j = Web3j.build(new HttpService("<your_node_url>"));
+//        TransactionReceipt greeting;
+//        Testcontract testcontract  = Testcontract.load("your_contract_address", web3j, Credentials.create("your_private_key"), new DefaultGasProvider());
 
-        try {
-           testcontract.set((BigInteger.TEN)).send();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        web3j.shutdown();
+//        try {
+//           testcontract.set((BigInteger.TEN)).send();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//
+//        web3j.shutdown();
 
         getSupportFragmentManager().beginTransaction().replace(R.id.Frame_Layout,new ProfileFragment()).commit();
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {

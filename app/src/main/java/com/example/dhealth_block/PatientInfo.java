@@ -37,7 +37,7 @@ public class PatientInfo extends AppCompatActivity {
                 String aadharno=aadhar.getText().toString();
                 patientClass=new PatientClass(full,aadharno,"asdf",addr);
                 DatabaseReference ref= FirebaseDatabase.getInstance().getReference().child("User");
-                ref.child("Patient").child(FirebaseAuth.getInstance().getCurrentUser().getUid().toString()).setValue(patientClass);
+                ref.child("Patient").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(patientClass);
                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
             }
         });

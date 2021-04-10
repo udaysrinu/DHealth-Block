@@ -17,17 +17,18 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class MedicalHistoryFragment extends Fragment {
 
     FloatingActionButton newTreatment;
     private String idItem;
-    private ArrayList<Disease> DiseaseList;
+    private List<Disease> diseaseList;
     private SwipeRefreshLayout swipeRefreshLayout;
     private RecyclerView recyclerView;
         //private OnFragmentInteractionListener mListener;
-    private DiseaseAdapter mAdaptador;
+    private AdapterRecycler mAdaptador;
     public MedicalHistoryFragment() {
 
     }
@@ -46,15 +47,23 @@ public class MedicalHistoryFragment extends Fragment {
             }
         });
       RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getContext());
-
-      mAdaptador = new DiseaseAdapter(getContext(), DiseaseList, this);
+      diseaseList=new ArrayList<>();
+      mAdaptador = new AdapterRecycler(diseaseList);
 
       recyclerView = (RecyclerView) v.findViewById(R.id.recyclerView);
       recyclerView.setLayoutManager(mLayoutManager);
       recyclerView.setItemAnimator(new DefaultItemAnimator());
       recyclerView.addItemDecoration(new DividerItemDecoration(v.getContext(), LinearLayoutManager.VERTICAL));
       recyclerView.setAdapter(mAdaptador);
-
+      diseaseList.add(new Disease("asfgsdf","asdfasdf","dsfkj","asdfnufv","sdfn eur","sdfnunnvie","fesbgiweu"));
+      diseaseList.add(new Disease("asfgsdf","asdfasdf","dsfkj","asdfnufv","sdfn eur","sdfnunnvie","fesbgiweu"));
+      diseaseList.add(new Disease("asfgsdf","asdfasdf","dsfkj","asdfnufv","sdfn eur","sdfnunnvie","fesbgiweu"));
+      diseaseList.add(new Disease("asfgsdf","asdfasdf","dsfkj","asdfnufv","sdfn eur","sdfnunnvie","fesbgiweu"));
+      diseaseList.add(new Disease("asfgsdf","asdfasdf","dsfkj","asdfnufv","sdfn eur","sdfnunnvie","fesbgiweu"));
+      diseaseList.add(new Disease("asfgsdf","asdfasdf","dsfkj","asdfnufv","sdfn eur","sdfnunnvie","fesbgiweu"));
+      diseaseList.add(new Disease("asfgsdf","asdfasdf","dsfkj","asdfnufv","sdfn eur","sdfnunnvie","fesbgiweu"));
+      diseaseList.add(new Disease("asfgsdf","asdfasdf","dsfkj","asdfnufv","sdfn eur","sdfnunnvie","fesbgiweu"));
+      mAdaptador.notifyDataSetChanged();
       Log.i("onCreateView","Fin");
         return v;
   }
