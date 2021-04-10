@@ -7,6 +7,7 @@
     tools:context=".NewTreatmentBegin">
 
     <ScrollView
+        android:padding="10dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -20,23 +21,31 @@
             android:orientation="vertical">
 
             <LinearLayout
+                android:padding="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <TextView
+                    android:textSize="18sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Disease Name:"/>
 
                 <EditText
+                    android:padding="10dp"
+                    android:textColor="#79000000"
+                    android:textColorHint="#79000000"
+                    android:textSize="18sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Enter Disease Name"/>
+                    android:hint="Enter Disease Name"
+                    android:background="@drawable/edittext_desiign"/>
 
             </LinearLayout>
 
             <LinearLayout
+                android:padding="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
@@ -47,6 +56,10 @@
                     android:text="Doctor's Name"/>
 
                 <EditText
+                    android:padding="10dp"
+                    android:textColor="#79000000"
+                    android:textColorHint="#79000000"
+                    android:background="@drawable/edittext_desiign"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Enter Doctor's Name"/>
@@ -54,11 +67,13 @@
             </LinearLayout>
 
             <LinearLayout
+                android:padding="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <TextView
+                    android:textSize="18sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Date(DD:MM:YYY) :"/>
@@ -70,19 +85,39 @@
                     android:weightSum="3">
 
                     <EditText
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight=".3"
-                        android:hint="DD"/>
-                    <EditText
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight=".3"
-                        android:hint="MM"/>
-                    <EditText
+                        android:padding="5dp"
+                        android:layout_margin="5dp"
+                        android:textColor="#79000000"
+                        android:textColorHint="#79000000"
+                        android:background="@drawable/edittext_desiign"
+                        android:textSize="18sp"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight=".4"
+                        android:hint="DD"/>
+
+                    <EditText
+                        android:layout_margin="5dp"
+                        android:padding="5dp"
+                        android:textColor="#79000000"
+                        android:textColorHint="#79000000"
+                        android:background="@drawable/edittext_desiign"
+                        android:textSize="18sp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:hint="MM"/>
+
+                    <EditText
+                        android:layout_margin="5dp"
+                        android:padding="5dp"
+                        android:textColor="#79000000"
+                        android:textColorHint="#79000000"
+                        android:background="@drawable/edittext_desiign"
+                        android:textSize="18sp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".6"
                         android:hint="YYYY"/>
 
                 </LinearLayout>
@@ -90,16 +125,23 @@
             </LinearLayout>
 
             <LinearLayout
+                android:padding="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <TextView
+                    android:textSize="18sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Description:"/>
 
                 <EditText
+                    android:padding="10dp"
+                    android:textColor="#79000000"
+                    android:textColorHint="#79000000"
+                    android:background="@drawable/edittext_desiign"
+                    android:textSize="18sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Enter Descriptioin"/>
@@ -107,16 +149,23 @@
             </LinearLayout>
 
             <LinearLayout
+                android:padding="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <TextView
+                    android:textSize="18sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Medicines(if any):"/>
 
                 <EditText
+                    android:padding="10dp"
+                    android:textColor="#79000000"
+                    android:textColorHint="#79000000"
+                    android:background="@drawable/edittext_desiign"
+                    android:textSize="18sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Medicines"
@@ -125,16 +174,23 @@
             </LinearLayout>
 
             <LinearLayout
+                android:padding="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <TextView
+                    android:textSize="18sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Precautions(if any):"/>
 
                 <EditText
+                    android:padding="10dp"
+                    android:textColor="#79000000"
+                    android:textColorHint="#79000000"
+                    android:background="@drawable/edittext_desiign"
+                    android:textSize="18sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Enter Precautions"/>
@@ -142,16 +198,23 @@
             </LinearLayout>
 
             <LinearLayout
+                android:padding="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <TextView
+                    android:textSize="18sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="License #:"/>
 
                 <EditText
+                    android:padding="10dp"
+                    android:textColor="#79000000"
+                    android:textColorHint="#79000000"
+                    android:background="@drawable/edittext_desiign"
+                    android:textSize="18sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Enter License #"/>
@@ -159,49 +222,59 @@
             </LinearLayout>
 
             <LinearLayout
+                android:padding="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <TextView
+                    android:textSize="18sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Notes(if any):"/>
 
                 <EditText
+                    android:padding="10dp"
+                    android:textColor="#79000000"
+                    android:textColorHint="#79000000"
+                    android:background="@drawable/edittext_desiign"
+                    android:textSize="18sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Enter Notes"/>
 
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="4">
+<!--            <LinearLayout-->
+<!--                android:padding="10dp"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:weightSum="4">-->
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="Upload Report (if any):"
-                    android:layout_weight="2.5"/>
+<!--                <TextView-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Upload Report (if any):"-->
+<!--                    android:layout_weight="2.5"/>-->
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/custom_button"
-                    android:hint="Choose Files"
-                    android:layout_weight="0.1"/>
+<!--                <Button-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:background="@drawable/buttonstyle"-->
+<!--                    android:hint="Choose Files"-->
+<!--                    android:layout_weight="0.1"/>-->
 
-            </LinearLayout>
+<!--            </LinearLayout>-->
 
             <Button
                 android:id="@+id/startbtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/custom_button"
+                android:background="@drawable/buttonstyle"
                 android:text="Start"
+                android:textColor="#fff"
                 android:layout_gravity="center"/>
 
         </LinearLayout>

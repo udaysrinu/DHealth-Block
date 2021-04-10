@@ -7,12 +7,16 @@
     tools:context=".ProfileFragment">
 
     <androidx.cardview.widget.CardView
+        android:layout_margin="20dp"
+        app:cardCornerRadius="15dp"
+        android:outlineSpotShadowColor="#ffd3b4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
+            android:padding="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -23,61 +27,76 @@
                 android:layout_height="150dp"/>
 
             <LinearLayout
+                android:padding="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:weightSum="2">
+                android:weightSum="5">
 
                 <TextView
+                    android:textSize="18sp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="FullName"
-                    android:layout_weight="0.5"/>
+                    android:layout_weight="2"/>
 
                 <TextView
+                    android:textSize="18sp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1.5"
+                    android:background="@drawable/edittext_desiign"
+                    android:padding="5dp"
+                    android:layout_weight="3"
                     android:text="Mr. ABC"/>
 
             </LinearLayout>
 
             <LinearLayout
+                android:padding="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:weightSum="2">
+                android:weightSum="5">
 
                 <TextView
+                    android:textSize="18sp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="D.O.B"
-                    android:layout_weight="0.5"/>
+                    android:layout_weight="2"/>
 
                 <TextView
+                    android:textSize="18sp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1.5"
-                    android:text="19/01/2001"/>
+                    android:padding="5dp"
+                    android:layout_weight="3"
+                    android:text="19/01/2001"
+                    android:background="@drawable/edittext_desiign"/>
 
             </LinearLayout>
 
             <LinearLayout
+                android:padding="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:weightSum="2">
+                android:weightSum="5">
 
                 <TextView
+                    android:textSize="18sp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
+                    android:layout_weight="2"
                     android:text="Gender"/>
 
                 <TextView
+                    android:textSize="18sp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1.5"
+                    android:padding="5dp"
+                    android:layout_weight="3"
+                    android:background="@drawable/edittext_desiign"
                     android:text="19/01/2001"/>
 
             </LinearLayout>

@@ -4,16 +4,16 @@
     <item
         android:id="@+id/profile"
         android:title="Profile"
-        android:icon="@color/design_default_color_primary"/>
+        android:icon="@drawable/ic_baseline_account_circle_24"/>
 
     <item
         android:id="@+id/medHis"
         android:title="Medical History"
-        android:icon="@color/purple_200"/>
+        android:icon="@drawable/ic_baseline_history_24"/>
 
     <item
         android:id="@+id/logout"
         android:title="Log Out"
-        android:icon="@color/teal_200"/>
+        android:icon="@drawable/logout"/>
 
 </menu>

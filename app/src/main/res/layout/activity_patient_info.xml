@@ -5,13 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".PatientInfo"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="10dp">
 
     <TextView
+        android:padding="10dp"
+        android:textSize="18dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Full Name"/>
     <EditText
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:textColor="#79000000"
+        android:textColorHint="#79000000"
+        android:background="@drawable/edittext_desiign"
         android:id="@+id/fullnameedtxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -63,22 +71,36 @@
 
 
     <TextView
+        android:padding="10dp"
+        android:textSize="18dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Addres"/>
     <EditText
+        android:padding="10dp"
+        android:textSize="18dp"
+        android:textColor="#79000000"
+        android:textColorHint="#79000000"
         android:id="@+id/addressedttxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/edittext_desiign"
         android:hint="Address"/>
 
     <TextView
+        android:padding="10dp"
+        android:textSize="18dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Aadhar"/>
     <EditText
+        android:padding="10dp"
+        android:textSize="18dp"
+        android:textColor="#79000000"
+        android:textColorHint="#79000000"
         android:id="@+id/aadharedttxt"
         android:layout_width="match_parent"
+        android:background="@drawable/edittext_desiign"
         android:layout_height="wrap_content"
         android:hint="Please Enter Aadhar Number"/>
 

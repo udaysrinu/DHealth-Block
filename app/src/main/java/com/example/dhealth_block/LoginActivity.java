@@ -89,7 +89,8 @@ public class LoginActivity extends AppCompatActivity {
                     else{
                         f=1;
                     }
-
+                    System.out.println("Value of f is: " + f);
+                    Toast.makeText(getApplicationContext(),"Value of f is:" + f,Toast.LENGTH_LONG).show();
                     verifyotp.setVisibility(View.VISIBLE);
                     sendotp.setVisibility(View.INVISIBLE);
                     String phoneNumber = "+91" + phnumberedttxt.getText().toString();
@@ -143,6 +144,7 @@ public class LoginActivity extends AppCompatActivity {
                     verifyotp.setVisibility(View.INVISIBLE);
                     sendotp.setVisibility(View.VISIBLE);
                     Toast.makeText(getApplicationContext(),"Too many logins",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(getApplicationContext(),"Value of f is:" + f,Toast.LENGTH_LONG).show();
                 }
 
                 // Show a message and update the UI
@@ -163,6 +165,7 @@ public class LoginActivity extends AppCompatActivity {
 
         if(FirebaseAuth.getInstance().getCurrentUser()!=null){
             patientcheck();
+            Toast.makeText(getApplicationContext(),"Inside start :     Value of f is:" + f,Toast.LENGTH_LONG).show();
 //            startActivity(new Intent(getApplicationContext(),MainActivity.class));
         }
 
@@ -181,6 +184,7 @@ public class LoginActivity extends AppCompatActivity {
                             }else{
 //                                startActivity(new Intent(getApplicationContext(),DoctorInfo.class));
                                 doctorcheck();
+                                Toast.makeText(getApplicationContext(),"Value of f is:" + f,Toast.LENGTH_LONG).show();
                             }
 
 //                            startActivity(new Intent(getApplicationContext(),MainActivity.class));
@@ -204,7 +208,6 @@ public class LoginActivity extends AppCompatActivity {
                 else{
                     startActivity(new Intent(getApplicationContext(),PatientInfo.class));
                 }
-
             }
 
             @Override
@@ -220,12 +223,12 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
-                if(snapshot.child("Doctor").exists() && snapshot.child("Doctor").child(FirebaseAuth.getInstance().getCurrentUser().toString()).exists()){
+                if(snapshot.child("Doctor").exists() && snapshot.child("Doctor").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).exists()){
                     startActivity(new Intent(getApplicationContext(),MainActivity.class));
                 }
                 else{
 //                    ref.child("Patient").child(FirebaseAuth.getInstance().getCurrentUser().toString()).setValue("1");
-                    startActivity(new Intent(getApplicationContext(),PatientInfo.class));
+                    startActivity(new Intent(getApplicationContext(),DoctorInfo.class));
                 }
 
             }

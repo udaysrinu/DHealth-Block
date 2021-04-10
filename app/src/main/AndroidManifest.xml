@@ -12,18 +12,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DHealth_block">
-        <activity android:name=".FindDoctor"></activity>
+        <activity android:name=".FindDoctor"/>
         <activity android:name=".NewAppointment" />
         <activity android:name=".NewTreatmentBegin" />
-        <activity android:name=".DoctorInfo" />
+        <activity android:name=".DoctorInfo" >
+        </activity>
         <activity android:name=".PatientInfo" />
         <activity android:name=".LoginActivity">
-            <intent-filter>
+                <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity android:name=".MainActivity"></activity>
     </application>
 
