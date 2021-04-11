@@ -10,7 +10,7 @@
 
 ## Introduction:
   ### Problem Around Us
-<p>In our daily lives we dont give much attention to our medical reports, they are lost in the dust. It is also true that a doctor's cant understand the patient totally until he sees his medical reports of few years back.</p>
+<p>In our daily lives we dont give much attention to our medical reports, they are lost in the dust. It is also true that doctor's cant understand the patient totally until he sees the medical report of few years back.</p>
 
 ### A Decentralised Solution
 <p>An app that can help users (patient and doctors)easily manage their medical history</p>
