@@ -37,6 +37,7 @@
                     android:textColor="#79000000"
                     android:textColorHint="#79000000"
                     android:textSize="18sp"
+                    android:id="@+id/DiseaseName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Enter Disease Name"
@@ -58,6 +59,7 @@
                 <EditText
                     android:padding="10dp"
                     android:textColor="#79000000"
+                    android:id="@+id/Doctorname"
                     android:textColorHint="#79000000"
                     android:background="@drawable/edittext_desiign"
                     android:layout_width="match_parent"
@@ -91,6 +93,7 @@
                         android:textColorHint="#79000000"
                         android:background="@drawable/edittext_desiign"
                         android:textSize="18sp"
+                        android:id="@+id/date"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight=".4"
@@ -99,6 +102,7 @@
                     <EditText
                         android:layout_margin="5dp"
                         android:padding="5dp"
+                        android:id="@+id/month"
                         android:textColor="#79000000"
                         android:textColorHint="#79000000"
                         android:background="@drawable/edittext_desiign"
@@ -112,6 +116,7 @@
                         android:layout_margin="5dp"
                         android:padding="5dp"
                         android:textColor="#79000000"
+                        android:id="@+id/year"
                         android:textColorHint="#79000000"
                         android:background="@drawable/edittext_desiign"
                         android:textSize="18sp"
@@ -138,6 +143,7 @@
 
                 <EditText
                     android:padding="10dp"
+                    android:id="@+id/description"
                     android:textColor="#79000000"
                     android:textColorHint="#79000000"
                     android:background="@drawable/edittext_desiign"
@@ -158,17 +164,18 @@
                     android:textSize="18sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Medicines(if any):"/>
+                    android:text="Hospital(if any):"/>
 
                 <EditText
                     android:padding="10dp"
                     android:textColor="#79000000"
                     android:textColorHint="#79000000"
+                    android:id="@+id/hospital"
                     android:background="@drawable/edittext_desiign"
                     android:textSize="18sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Medicines"
+                    android:hint="Hospital"
                     android:inputType="textMultiLine"/>
 
             </LinearLayout>
@@ -189,6 +196,7 @@
                     android:padding="10dp"
                     android:textColor="#79000000"
                     android:textColorHint="#79000000"
+                    android:id="@+id/precautions"
                     android:background="@drawable/edittext_desiign"
                     android:textSize="18sp"
                     android:layout_width="match_parent"
@@ -213,6 +221,7 @@
                     android:padding="10dp"
                     android:textColor="#79000000"
                     android:textColorHint="#79000000"
+                    android:id="@+id/license"
                     android:background="@drawable/edittext_desiign"
                     android:textSize="18sp"
                     android:layout_width="match_parent"
@@ -237,6 +246,7 @@
                     android:padding="10dp"
                     android:textColor="#79000000"
                     android:textColorHint="#79000000"
+                    android:id="@+id/notes"
                     android:background="@drawable/edittext_desiign"
                     android:textSize="18sp"
                     android:layout_width="match_parent"

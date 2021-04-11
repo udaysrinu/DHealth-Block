@@ -27,9 +27,9 @@ public class AdapterRecycler extends RecyclerView.Adapter<AdapterRecycler.Viewho
 
     @Override
     public void onBindViewHolder(@NonNull Viewholder holder, int position) {
-        String diseaseName=diseaseList.get(position).getDiseaseName();
-        String doctorName=diseaseList.get(position).getDoctorTreated();
-        String date=diseaseList.get(position).getDate();
+        String diseaseName=diseaseList.get(position).getDisease();
+        String doctorName=diseaseList.get(position).getDocname();
+        String date= String.valueOf(diseaseList.get(position).getDate());
         holder.setData(diseaseName,date,doctorName);
     }
 
@@ -49,7 +49,7 @@ public class AdapterRecycler extends RecyclerView.Adapter<AdapterRecycler.Viewho
             date=itemView.findViewById(R.id.date);
         }
 
-        private void setData(String disesename,String date,String doctorName){
+        private void setData(String disesename,String  date,String doctorName){
             this.diseaseName.setText(disesename);
             this.date.setText(date);
             this.doctorName.setText(doctorName);

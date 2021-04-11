@@ -1,71 +1,55 @@
 package com.example.dhealth_block;
 
+import java.math.BigInteger;
+
 public class Disease {
-    private String DiseaseName,DoctorTreated,date,precautions,Description,Medicines,Symptons;
-
-    public Disease(String diseaseName, String doctorTreated, String date, String precautions, String description, String medicines, String symptons) {
-        DiseaseName = diseaseName;
-        DoctorTreated = doctorTreated;
+    private String docname,disease;
+    private BigInteger patientid,license,date;
+    public Disease(BigInteger patientid, String docname, BigInteger license, BigInteger date, String disease) {
+        this.patientid = patientid;
+        this.docname = docname;
+        this.license = license;
         this.date = date;
-        this.precautions = precautions;
-        Description = description;
-        Medicines = medicines;
-        Symptons = symptons;
+        this.disease = disease;
     }
 
-    public String getDiseaseName() {
-        return DiseaseName;
+    public String getDocname() {
+        return docname;
     }
 
-    public void setDiseaseName(String diseaseName) {
-        DiseaseName = diseaseName;
+    public void setDocname(String docname) {
+        this.docname = docname;
     }
 
-    public String getDoctorTreated() {
-        return DoctorTreated;
+    public String getDisease() {
+        return disease;
     }
 
-    public void setDoctorTreated(String doctorTreated) {
-        DoctorTreated = doctorTreated;
+    public void setDisease(String disease) {
+        this.disease = disease;
     }
 
-    public String getDate() {
+    public BigInteger getPatientid() {
+        return patientid;
+    }
+
+    public void setPatientid(BigInteger patientid) {
+        this.patientid = patientid;
+    }
+
+    public BigInteger getLicense() {
+        return license;
+    }
+
+    public void setLicense(BigInteger license) {
+        this.license = license;
+    }
+
+    public BigInteger getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(BigInteger date) {
         this.date = date;
-    }
-
-    public String getPrecautions() {
-        return precautions;
-    }
-
-    public void setPrecautions(String precautions) {
-        this.precautions = precautions;
-    }
-
-    public String getDescription() {
-        return Description;
-    }
-
-    public void setDescription(String description) {
-        Description = description;
-    }
-
-    public String getMedicines() {
-        return Medicines;
-    }
-
-    public void setMedicines(String medicines) {
-        Medicines = medicines;
-    }
-
-    public String getSymptons() {
-        return Symptons;
-    }
-
-    public void setSymptons(String symptons) {
-        Symptons = symptons;
     }
 }

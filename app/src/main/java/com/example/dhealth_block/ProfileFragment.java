@@ -21,13 +21,14 @@ import com.google.firebase.database.ValueEventListener;
 
 import org.web3j.crypto.Credentials;
 import org.web3j.protocol.Web3j;
-import org.web3j.protocol.core.RemoteFunctionCall;
 import org.web3j.protocol.core.methods.response.Web3ClientVersion;
 import org.web3j.protocol.http.HttpService;
 import org.web3j.tuples.generated.Tuple4;
 import org.web3j.tx.gas.DefaultGasProvider;
 
 import java.math.BigInteger;
+
+import java8.util.concurrent.CompletableFuture;
 
 public class ProfileFragment extends Fragment {
 
@@ -49,6 +50,7 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 userid=snapshot.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("id").getValue().toString();
+                PatientData();
             }
 
             @Override
@@ -76,8 +78,12 @@ public class ProfileFragment extends Fragment {
 //                    BigInteger bigIntegerStr=new BigInteger(aadharno);
 //                    testcontract.createPatient(full,bigIntegerStr,privateKeystr).sendAsync();
                         BigInteger bigIntegerStr=new BigInteger(userid);
-                        RemoteFunctionCall<Tuple4<BigInteger, String, BigInteger, String>> t=testcontract.pMap(bigIntegerStr);
-                        Log.i("fgsdf", String.valueOf(t));
+                       CompletableFuture<Tuple4<BigInteger, String, BigInteger, String>> t=testcontract.pMap(bigIntegerStr).sendAsync();
+                       Tuple4 tuple=t.get();
+                    fullname.setText((CharSequence) tuple.getValue2());
+                     id.setText(String.valueOf(tuple.getValue1()));
+                   aadharno.setText(String.valueOf( tuple.getValue3()));
+                  Log.i("fgsdf", "hello");
 
                        // Log.i("value",.name);
                 }
