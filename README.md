@@ -31,7 +31,7 @@
 2. Based on patient disease history -> The upcoming medical risk.
 
 
-#### User data flow
+#### User data flow - For Doctors and Patients
 ![Data Flow](https://github.com/udaysrinu/DHealth-Block/blob/b430bd2dc082c8ebad966e9c8ce42f937e0280b8/images/dataflow.jpg "DataFlow")
 
   
