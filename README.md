@@ -49,7 +49,8 @@
   2) Android Studio
   3) Ethereum Blockchain
   4) Matic
-  5) Firebase
+  5) Web3j
+  6) Firebase
   
 
 ## Contributors:
