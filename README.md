@@ -13,7 +13,7 @@
 <p>In our daily lives we dont give much attention to our medical reports, they are lost in the dust. It is also true that a doctor's cant understand the patient totally until he sees his medical reports of few years back.</p>
 
 ### A Decentralised Solution
-<p>An app that can help users easily manage their medical history</p>
+<p>An app that can help users (patient and doctors)easily manage their medical history</p>
 
 #### Features
 
@@ -28,12 +28,13 @@
 ##### Machine Learning Features
 
 1. It can be used by the doctors to better understand their patients and prescribe them well suited medicines.
+2. Based on patient disease history -> The upcoming medical risk.
   
 ## Demo Video Link:
   <a href="https://youtu.be/dQw4w9WgXcQ">https://youtu.be/dQw4w9WgXcQ</a>
   
 ## Presentation Link:
-  <a href="https://docs.google.com/presentation/d/1NEbqpM6J6UkmHN_J6NsgOhKvDU6fkfnli4OIg1lh-pk/edit?usp=sharing"> ppt link here </a>
+  <a href="https://docs.google.com/presentation/d/1hDrJ4dDie20ds_RUNivez1sBMxraHswHCpkc3Ex4CMg/edit?usp=sharing"> ppt link here </a>
   
   
 ## Table of Contents:
