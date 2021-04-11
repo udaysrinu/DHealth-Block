@@ -19,13 +19,13 @@
 
 ##### Decentralised Features
 1. Single source of truth on ethereum blockchain.
-2. Medicle history for users.
+2. Medical history for users.
 3. Medical history of Patients treated by a doctors.
-4. A Decentralised rating system, rated by the users on the network.
-5. Find list of doctors near you, and you can choose the best rated doctor.
+4. A Decentralised rating system, rated by the users on the network. - To be implemented.
+5. Find list of doctors near you, and you can choose the best rated doctor - To be implemented.
 
 
-##### Machine Learning Features
+##### Future Goals - Machine Learning Features 
 
 1. It can be used by the doctors to better understand their patients and prescribe them well suited medicines.
 2. Based on patient disease history -> The upcoming medical risk.
