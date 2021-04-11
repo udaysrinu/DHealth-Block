@@ -36,7 +36,7 @@
 
   
 ## Demo Video Link:
-  <a href="https://youtu.be/dQw4w9WgXcQ">https://youtu.be/dQw4w9WgXcQ</a>
+  <a href="https://youtu.be/klDg0ZmR-rc">https://youtu.be/klDg0ZmR-rc</a>
   
 ## Presentation Link:
   <a href="https://docs.google.com/presentation/d/1hDrJ4dDie20ds_RUNivez1sBMxraHswHCpkc3Ex4CMg/edit?usp=sharing"> ppt link here </a>
@@ -49,6 +49,7 @@
   2) Android Studio
   3) Ethereum Blockchain
   4) Matic
+  5) Firebase
   
 
 ## Contributors:
