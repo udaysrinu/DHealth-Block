@@ -26,34 +26,34 @@
         android:text="Treated BY:- Dr. XYZ"
         app:layout_constraintTop_toBottomOf="@+id/diseasetxt"/>
 
-    <LinearLayout
-        android:id="@+id/descriptionLinearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@+id/doctortxt">
+<!--    <LinearLayout-->
+<!--        android:id="@+id/descriptionLinearLayout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/doctortxt">-->
 
-        <TextView
-            android:padding="10dp"
-            android:textSize="18sp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Description"/>
+<!--        <TextView-->
+<!--            android:padding="10dp"-->
+<!--            android:textSize="18sp"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Description"/>-->
 
-        <TextView
-            android:padding="10dp"
-            android:textSize="18sp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Here will be some introduction about the disease"/>
+<!--        <TextView-->
+<!--            android:padding="10dp"-->
+<!--            android:textSize="18sp"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Here will be some introduction about the disease"/>-->
 
-    </LinearLayout>
+<!--    </LinearLayout>-->
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/descriptionLinearLayout"/>
+        app:layout_constraintTop_toBottomOf="@+id/doctortxt"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/layout"

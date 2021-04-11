@@ -17,6 +17,11 @@ public class AdapterRecycler extends RecyclerView.Adapter<AdapterRecycler.Viewho
 
     private List<Disease> diseaseList;
     private Context context;
+    String diseasename;
+    String doctorNamestr;
+    String datestr;
+    String license;
+    String id;
 
 
     public AdapterRecycler(List<Disease> diseaseList,Context context) {
@@ -33,10 +38,12 @@ public class AdapterRecycler extends RecyclerView.Adapter<AdapterRecycler.Viewho
 
     @Override
     public void onBindViewHolder(@NonNull Viewholder holder, int position) {
-        String diseaseName=diseaseList.get(position).getDisease();
-        String doctorName=diseaseList.get(position).getDocname();
-        String date= String.valueOf(diseaseList.get(position).getDate());
-        holder.setData(diseaseName,date,doctorName);
+         diseasename=diseaseList.get(position).getDisease();
+         doctorNamestr=diseaseList.get(position).getDocname();
+         datestr= String.valueOf(diseaseList.get(position).getDate());
+         license=String.valueOf(diseaseList.get(position).getLicense());
+         id=String.valueOf(diseaseList.get(position).getPatientid());
+        holder.setData(diseasename,datestr,doctorNamestr);
     }
 
     @Override
@@ -59,7 +66,15 @@ public class AdapterRecycler extends RecyclerView.Adapter<AdapterRecycler.Viewho
             cardView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    context.startActivity(new Intent(context,NewAppointment.class));
+//                    Bundle a=new Bundle();\
+//                    int itemPosition =.getChildLayoutPosition(context);
+                    Intent intent=new Intent(context,NewAppointment.class);
+                    intent.putExtra("disease",diseasename);
+                    intent.putExtra("date",datestr);
+                    intent.putExtra("doctor", doctorNamestr);
+                    intent.putExtra("license",license);
+                    intent.putExtra("id",id);
+                    context.startActivity(intent);
                 }
             });
         }

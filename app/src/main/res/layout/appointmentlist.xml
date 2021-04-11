@@ -23,36 +23,36 @@
         android:text="Date"
         android:gravity="center"/>
 
-    <LinearLayout
-        android:layout_marginRight="3dp"
-        android:layout_marginLeft="3dp"
-        android:layout_marginBottom="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="5">
+<!--    <LinearLayout-->
+<!--        android:layout_marginRight="3dp"-->
+<!--        android:layout_marginLeft="3dp"-->
+<!--        android:layout_marginBottom="5dp"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:weightSum="5">-->
 
-        <TextView
-            android:padding="5dp"
-            android:textSize="18dp"
-            android:layout_width="0dp"
-            android:layout_weight="1.4"
-            android:layout_height="wrap_content"
-            android:text="Progress"/>
+<!--        <TextView-->
+<!--            android:padding="5dp"-->
+<!--            android:textSize="18dp"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_weight="1.4"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Progress"/>-->
 
-        <TextView
-            android:background="@drawable/edittext_desiign"
-            android:padding="10dp"
-            android:textSize="18dp"
-            android:id="@+id/progresstxt"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="3.6"
-            android:inputType="textMultiLine"
-            android:text="sdgfb abdfkj asbdf asdfh asndf asf asfn asf fahsdfsafdfsfadf asdfhasf"/>
+<!--        <TextView-->
+<!--            android:background="@drawable/edittext_desiign"-->
+<!--            android:padding="10dp"-->
+<!--            android:textSize="18dp"-->
+<!--            android:id="@+id/progresstxt"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="3.6"-->
+<!--            android:inputType="textMultiLine"-->
+<!--            android:text="sdgfb abdfkj asbdf asdfh asndf asf asfn asf fahsdfsafdfsfadf asdfhasf"/>-->
 
-    </LinearLayout>
+<!--    </LinearLayout>-->
 
     <LinearLayout
         android:layout_marginRight="3dp"
@@ -85,67 +85,67 @@
 
         </LinearLayout>
 
-    <LinearLayout
-        android:layout_marginRight="3dp"
-        android:layout_marginLeft="3dp"
-        android:layout_marginBottom="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="5">
+<!--    <LinearLayout-->
+<!--        android:layout_marginRight="3dp"-->
+<!--        android:layout_marginLeft="3dp"-->
+<!--        android:layout_marginBottom="5dp"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:weightSum="5">-->
 
-        <TextView
-            android:padding="5dp"
-            android:textSize="18dp"
-            android:layout_width="0dp"
-            android:layout_weight="1.4"
-            android:layout_height="wrap_content"
-            android:text="Medicines"/>
+<!--        <TextView-->
+<!--            android:padding="5dp"-->
+<!--            android:textSize="18dp"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_weight="1.4"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Medicines"/>-->
 
-        <TextView
-            android:background="@drawable/edittext_desiign"
-            android:textSize="18sp"
-            android:padding="10dp"
-            android:id="@+id/medicinestxt"
-            android:layout_width="0dp"
-            android:layout_weight="3.6"
-            android:inputType="textMultiLine"
-            android:layout_height="wrap_content"
-            android:text="sdgfsdfsbfsjdasdfsbf"/>
+<!--        <TextView-->
+<!--            android:background="@drawable/edittext_desiign"-->
+<!--            android:textSize="18sp"-->
+<!--            android:padding="10dp"-->
+<!--            android:id="@+id/medicinestxt"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_weight="3.6"-->
+<!--            android:inputType="textMultiLine"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="sdgfsdfsbfsjdasdfsbf"/>-->
 
-    </LinearLayout>
+<!--    </LinearLayout>-->
 
-    <LinearLayout
-        android:layout_marginRight="3dp"
-        android:layout_marginLeft="3dp"
-        android:layout_marginBottom="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="5">
+<!--    <LinearLayout-->
+<!--        android:layout_marginRight="3dp"-->
+<!--        android:layout_marginLeft="3dp"-->
+<!--        android:layout_marginBottom="5dp"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:weightSum="5">-->
 
-        <TextView
-            android:padding="5dp"
-            android:textSize="18dp"
-            android:layout_width="0dp"
-            android:layout_weight="1.4"
-            android:layout_height="wrap_content"
-            android:text="Notes"/>
+<!--        <TextView-->
+<!--            android:padding="5dp"-->
+<!--            android:textSize="18dp"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_weight="1.4"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Notes"/>-->
 
-        <TextView
-            android:background="@drawable/edittext_desiign"
-            android:padding="10dp"
-            android:textSize="18dp"
-            android:id="@+id/notestxt"
-            android:layout_width="0dp"
-            android:layout_weight="3.6"
-            android:inputType="textMultiLine"
-            android:layout_height="wrap_content"
-            android:text="sdfsdf  sjdf aldlfbiawugefb ua ofh isdb  fioebf hvaiusd klndvhvsf "/>
+<!--        <TextView-->
+<!--            android:background="@drawable/edittext_desiign"-->
+<!--            android:padding="10dp"-->
+<!--            android:textSize="18dp"-->
+<!--            android:id="@+id/notestxt"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_weight="3.6"-->
+<!--            android:inputType="textMultiLine"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="sdfsdf  sjdf aldlfbiawugefb ua ofh isdb  fioebf hvaiusd klndvhvsf "/>-->
 
-    </LinearLayout>
+<!--    </LinearLayout>-->
         </LinearLayout>
 
     </ScrollView>

@@ -43,9 +43,9 @@ public class MedicalHistoryFragment extends Fragment {
 
     FloatingActionButton newTreatment;
     private String idItem;
-    private List<Disease> diseaseList;
+    public static List<Disease> diseaseList=new ArrayList<>();
     private SwipeRefreshLayout swipeRefreshLayout;
-    private RecyclerView recyclerView;
+    public RecyclerView recyclerView;
         //private OnFragmentInteractionListener mListener;
     private AdapterRecycler mAdaptador;
     private String userid;
@@ -67,7 +67,7 @@ public class MedicalHistoryFragment extends Fragment {
             }
         });
       RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getContext());
-      diseaseList=new ArrayList<>();
+//      diseaseList=new ArrayList<>();
       mAdaptador = new AdapterRecycler(diseaseList,getContext());
 
       recyclerView = (RecyclerView) v.findViewById(R.id.recyclerView);
@@ -75,7 +75,7 @@ public class MedicalHistoryFragment extends Fragment {
       recyclerView.setItemAnimator(new DefaultItemAnimator());
       recyclerView.addItemDecoration(new DividerItemDecoration(v.getContext(), LinearLayoutManager.VERTICAL));
       recyclerView.setAdapter(mAdaptador);
-        diseaseList.clear();
+//        diseaseList.clear();
     // diseaseList.add(new Disease())
       getUID();
       mAdaptador.notifyDataSetChanged();
@@ -121,13 +121,13 @@ public class MedicalHistoryFragment extends Fragment {
                         List<String>list5= (List<String>) c.getValue5();
                         List<BigInteger>list3= (List<BigInteger>) c.getValue3();
                         List<BigInteger>list4= (List<BigInteger>) c.getValue4();
-                        for(int i=0;i<((List<BigInteger>) c.getValue1()).size();i++){
+                        for(int i=1;i<((List<BigInteger>) c.getValue1()).size();i++){
                             diseaseList.add(new Disease(list1.get(i),"Doctor Name:"+list2.get(i),list3.get(i),list4.get(i),"Disease Name :" +list5.get(i)));
 
                             Toast.makeText(getContext(),"notify",Toast.LENGTH_LONG).show();
                         }
                         mAdaptador.notifyDataSetChanged();
-                        Log.i("task", list2.get(0) );
+                        Log.i("task", list2.get(1) );
                     // Log.i("value",.name);
                 }
                 catch(Exception e){

@@ -27,12 +27,9 @@ public class Adapter extends RecyclerView.Adapter<Adapter.Viewholder> {
 
     @Override
     public void onBindViewHolder(@NonNull Viewholder holder, int position) {
-        String date=appointmentClassList.get(position).getDate()+":"+appointmentClassList.get(position).getMonth()+":"+appointmentClassList.get(position).getYear();
-        String progress=appointmentClassList.get(position).getProgress();
+        String date=appointmentClassList.get(position).getDate();
         String symptoms=appointmentClassList.get(position).getSymptoms();
-        String notes=appointmentClassList.get(position).getNote();
-        String medicines=appointmentClassList.get(position).getMedicines();
-        holder.setdata(date,progress,notes,symptoms,medicines);
+        holder.setdata(date,symptoms);
     }
 
     @Override
@@ -44,22 +41,22 @@ public class Adapter extends RecyclerView.Adapter<Adapter.Viewholder> {
 
         private TextView date,progress,note,symptoms, medicines;
 
-        private void setdata(String date,String progress,String note, String symptoms,String medicines){
+        private void setdata(String date,String symptoms){
             this.date.setText(date);
-            this.progress.setText(progress);
+//            this.progress.setText(progress);
             this.symptoms.setText(symptoms);
-            this.medicines.setText(medicines);
-            this.note.setText(note);
+//            this.medicines.setText(medicines);
+//            this.note.setText(note);
         }
 
         public Viewholder(@NonNull View itemView) {
             super(itemView);
 
             date=itemView.findViewById(R.id.datetxt);
-            progress=itemView.findViewById(R.id.progresstxt);
+//            progress=itemView.findViewById(R.id.progresstxt);
             symptoms=itemView.findViewById(R.id.symptomstxt);
-            medicines=itemView.findViewById(R.id.medicinestxt);
-            note=itemView.findViewById(R.id.notestxt);
+//            medicines=itemView.findViewById(R.id.medicinestxt);
+//            note=itemView.findViewById(R.id.notestxt);
 
         }
     }
