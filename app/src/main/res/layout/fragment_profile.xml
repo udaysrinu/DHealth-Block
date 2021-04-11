@@ -42,13 +42,13 @@
 
                 <TextView
                     android:id="@+id/fulnametxt"
-                    android:textSize="18sp"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="21dp"
+                    android:layout_weight="3"
                     android:background="@drawable/edittext_desiign"
                     android:padding="5dp"
-                    android:layout_weight="3"
-                    android:text="Mr. ABC"/>
+                    android:text="Mr. ABC"
+                    android:textSize="18sp" />
 
             </LinearLayout>
 

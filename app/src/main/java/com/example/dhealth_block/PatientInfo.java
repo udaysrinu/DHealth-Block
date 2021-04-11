@@ -103,12 +103,12 @@ public class PatientInfo extends AppCompatActivity {
             if(!clientVersion.hasError()){
                 Log.i("web3 req", clientVersion.getWeb3ClientVersion());
                 BigInteger initialS = BigInteger.valueOf(100000);
-                Testcontract testcontract  = Testcontract.load( "0x4855685BA961D546b3ccD74906003Ea4e360032e",web3, Credentials.create("fdceb2fd044f75e561763842a772ef70213ac7849b3a0d28907ac7d0919ef3ca"), new DefaultGasProvider());
+                Testcontract testcontract  = Testcontract.load( "0x4fb7f07431Adc149651feF059a99f1326b023341",web3, Credentials.create("fdceb2fd044f75e561763842a772ef70213ac7849b3a0d28907ac7d0919ef3ca"), new DefaultGasProvider());
                 Log.i("web3 req","moving to try");
-                try {
-                    Log.i("web3 req","in try");
-
-                    //Log.i("web3 req", testcontract.usingEmit().toString());
+//                try {
+//                    Log.i("web3 req","in try");
+//
+//                    //Log.i("web3 req", testcontract.usingEmit().toString());
                     try{
                         BigInteger bigIntegerStr=new BigInteger(aadharno);
                         testcontract.createPatient(full,bigIntegerStr,privateKeystr).sendAsync();
@@ -117,14 +117,14 @@ public class PatientInfo extends AppCompatActivity {
                         Log.i("web3 req", "onCreate: kajshdkjas");
                         e.printStackTrace();
                     }
-                    //CompletableFuture<BigInteger> x=testcontract.get().sendAsync();
-
-                    //Log.i("web3 req", String.valueOf(x.get()));
-                    Log.i("cvalue","updated here");
-                    Toast.makeText(getBaseContext(),"updated",Toast.LENGTH_SHORT).show();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
+//                    //CompletableFuture<BigInteger> x=testcontract.get().sendAsync();
+//
+//                    //Log.i("web3 req", String.valueOf(x.get()));
+//                    Log.i("cvalue","updated here");
+//                    Toast.makeText(getBaseContext(),"updated",Toast.LENGTH_SHORT).show();
+//                } catch (Exception e) {
+//                    e.printStackTrace();
+//                }
             }
             else {
                 Toast.makeText(getApplicationContext(),"wrong",Toast.LENGTH_LONG).show();
