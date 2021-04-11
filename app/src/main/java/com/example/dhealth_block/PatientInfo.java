@@ -58,7 +58,7 @@ public class PatientInfo extends AppCompatActivity {
 
     private void getid(){
         DatabaseReference ref=FirebaseDatabase.getInstance().getReference().child("User").child("Patient");
-        ref.addValueEventListener(new ValueEventListener() {
+        ref.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 id=snapshot.child("PatientNumber").getValue().toString();
@@ -73,6 +73,21 @@ public class PatientInfo extends AppCompatActivity {
 
             }
         });
+//        ref.addSValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                id=snapshot.child("PatientNumber").getValue().toString();
+//                int a=Integer.parseInt(id);
+//                a++;
+//                id=String.valueOf(a);
+//                createPatient();
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError error) {
+//
+//            }
+//        });
     }
 
     private void createPatient(){
