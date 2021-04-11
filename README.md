@@ -1,8 +1,7 @@
 # DHealth-Block
-## Decentralised Health Block
 
 
-<h1 align="center">Hack36 Template Readme</h1>
+<h1 align="center">Decentralised Health Block</h1>
 <p align="center">
 </p>
 
@@ -42,18 +41,18 @@
 ## Technology Stack:
   1) Java
   2) Android Studio
-  3) Javafx
-  4) Machine Learning
+  3) Ethereum Blockchain
+  4) Matic
   
 
 ## Contributors:
 
-Team Name: OP Squad
+Team Name: Against Gravity
 
-* [Anuj Modi](https://github.com/descifrado)
-* [Arsh Singh](https://github.com/iosdev474)
-* [Shashwat Pandey](https://github.com/shashwat1998)
-* [Manas Uniyal](https://github.com/ManasUniyal)
+* [Gidijala Uday Srinu](https://github.com/udaysrinu)
+* [Ashwini Pal](https://github.com/ashwiniswag)
+* [Ashutosh Kumar](https://github.com/waytoashutosh)
+
 
 
 ### Made at:
