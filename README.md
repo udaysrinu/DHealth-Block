@@ -56,9 +56,8 @@
 ## Contributors:
 
 Team Name: Against Gravity
-
-* [Gidijala Uday Srinu](https://github.com/udaysrinu)
 * [Ashwini Pal](https://github.com/ashwiniswag)
+* [Gidijala Uday Srinu](https://github.com/udaysrinu)
 * [Ashutosh Kumar](https://github.com/waytoashutosh)
 
 
