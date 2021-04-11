@@ -41,6 +41,7 @@
                     android:layout_weight="2"/>
 
                 <TextView
+                    android:id="@+id/fulnametxt"
                     android:textSize="18sp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -62,10 +63,11 @@
                     android:textSize="18sp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="D.O.B"
+                    android:text="Id"
                     android:layout_weight="2"/>
 
                 <TextView
+                    android:id="@+id/idtxt"
                     android:textSize="18sp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -88,9 +90,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
-                    android:text="Gender"/>
+                    android:text="Aadhar Number"/>
 
                 <TextView
+                    android:id="@+id/aadharnotxt"
                     android:textSize="18sp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
