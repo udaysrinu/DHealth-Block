@@ -21,8 +21,10 @@ import com.google.firebase.database.ValueEventListener;
 
 import org.web3j.crypto.Credentials;
 import org.web3j.protocol.Web3j;
+import org.web3j.protocol.core.RemoteFunctionCall;
 import org.web3j.protocol.core.methods.response.Web3ClientVersion;
 import org.web3j.protocol.http.HttpService;
+import org.web3j.tuples.generated.Tuple4;
 import org.web3j.tx.gas.DefaultGasProvider;
 
 import java.math.BigInteger;
@@ -74,7 +76,8 @@ public class ProfileFragment extends Fragment {
 //                    BigInteger bigIntegerStr=new BigInteger(aadharno);
 //                    testcontract.createPatient(full,bigIntegerStr,privateKeystr).sendAsync();
                         BigInteger bigIntegerStr=new BigInteger(userid);
-                        testcontract.pMap(bigIntegerStr);
+                        RemoteFunctionCall<Tuple4<BigInteger, String, BigInteger, String>> t=testcontract.pMap(bigIntegerStr);
+                        Log.i("fgsdf", String.valueOf(t));
 
                        // Log.i("value",.name);
                 }
