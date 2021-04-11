@@ -29,6 +29,11 @@
 
 1. It can be used by the doctors to better understand their patients and prescribe them well suited medicines.
 2. Based on patient disease history -> The upcoming medical risk.
+
+
+#### User data flow
+![Data Flow](https://github.com/udaysrinu/DHealth-Block/blob/b430bd2dc082c8ebad966e9c8ce42f937e0280b8/images/dataflow.jpg "DataFlow")
+
   
 ## Demo Video Link:
   <a href="https://youtu.be/dQw4w9WgXcQ">https://youtu.be/dQw4w9WgXcQ</a>
