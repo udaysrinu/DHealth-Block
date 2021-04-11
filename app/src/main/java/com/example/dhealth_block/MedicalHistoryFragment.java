@@ -68,7 +68,7 @@ public class MedicalHistoryFragment extends Fragment {
         });
       RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getContext());
       diseaseList=new ArrayList<>();
-      mAdaptador = new AdapterRecycler(diseaseList);
+      mAdaptador = new AdapterRecycler(diseaseList,getContext());
 
       recyclerView = (RecyclerView) v.findViewById(R.id.recyclerView);
       recyclerView.setLayoutManager(mLayoutManager);

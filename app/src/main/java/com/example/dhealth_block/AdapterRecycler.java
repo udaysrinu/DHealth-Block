@@ -1,11 +1,14 @@
 package com.example.dhealth_block;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
@@ -13,9 +16,12 @@ import java.util.List;
 public class AdapterRecycler extends RecyclerView.Adapter<AdapterRecycler.Viewholder> {
 
     private List<Disease> diseaseList;
+    private Context context;
 
-    public AdapterRecycler(List<Disease> diseaseList) {
+
+    public AdapterRecycler(List<Disease> diseaseList,Context context) {
         this.diseaseList = diseaseList;
+        this.context=context;
     }
 
     @NonNull
@@ -41,12 +47,21 @@ public class AdapterRecycler extends RecyclerView.Adapter<AdapterRecycler.Viewho
     class Viewholder extends RecyclerView.ViewHolder {
 
         private TextView doctorName,diseaseName,date;
+        private CardView cardView;
 
         public Viewholder(@NonNull View itemView) {
             super(itemView);
             doctorName=itemView.findViewById(R.id.doctor);
             diseaseName=itemView.findViewById(R.id.disease);
             date=itemView.findViewById(R.id.date);
+            cardView=itemView.findViewById(R.id.card_view);
+
+            cardView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    context.startActivity(new Intent(context,NewAppointment.class));
+                }
+            });
         }
 
         private void setData(String disesename,String  date,String doctorName){
