@@ -122,7 +122,7 @@ public class MedicalHistoryFragment extends Fragment {
                         List<BigInteger>list3= (List<BigInteger>) c.getValue3();
                         List<BigInteger>list4= (List<BigInteger>) c.getValue4();
                         for(int i=0;i<((List<BigInteger>) c.getValue1()).size();i++){
-                            diseaseList.add(new Disease(list1.get(i),list2.get(i),list3.get(i),list4.get(i),list5.get(i)));
+                            diseaseList.add(new Disease(list1.get(i),"Doctor Name:"+list2.get(i),list3.get(i),list4.get(i),"Disease Name :" +list5.get(i)));
 
                             Toast.makeText(getContext(),"notify",Toast.LENGTH_LONG).show();
                         }
