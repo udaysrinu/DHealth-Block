@@ -76,7 +76,7 @@ public class MedicalHistoryFragment extends Fragment {
       recyclerView.addItemDecoration(new DividerItemDecoration(v.getContext(), LinearLayoutManager.VERTICAL));
       recyclerView.setAdapter(mAdaptador);
 //        diseaseList.clear();
-    // diseaseList.add(new Disease())
+
       getUID();
       mAdaptador.notifyDataSetChanged();
       Log.i("onCreateView","Fin");
@@ -121,6 +121,7 @@ public class MedicalHistoryFragment extends Fragment {
                         List<String>list5= (List<String>) c.getValue5();
                         List<BigInteger>list3= (List<BigInteger>) c.getValue3();
                         List<BigInteger>list4= (List<BigInteger>) c.getValue4();
+                    //diseaseList.add(new Disease(new BigInteger(String.valueOf(123)),"Doctor name:john",new BigInteger(String.valueOf(678)),new BigInteger(String.valueOf(23152009)),"Disease Name :"));
                         for(int i=1;i<((List<BigInteger>) c.getValue1()).size();i++){
                             diseaseList.add(new Disease(list1.get(i),"Doctor Name:"+list2.get(i),list3.get(i),list4.get(i),"Disease Name :" +list5.get(i)));
 
