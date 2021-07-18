@@ -5,7 +5,7 @@
 <p align="center">
 </p>
 
-<!-- <a href="https://hack36.com"> <img src="http://bit.ly/BuiltAtHack36" height=20px> </a> -->
+<a href="https://hack36.com"> <img src="http://bit.ly/BuiltAtHack36" height=20px> </a>
 
 
 ## Introduction:
@@ -56,11 +56,10 @@
 ## Contributors:
 
 <!-- Team Name: Against Gravity -->
-<!-- * [Ashwini Pal](https://github.com/ashwiniswag) -->
+* [Ashwini Pal](https://github.com/ashwiniswag)
 * [Gidijala Uday Srinu](https://github.com/udaysrinu)
 * [Ashutosh Kumar](https://github.com/waytoashutosh)
-* Akshay Mall
-* Ashutosh Acharya
+
 
 
 <!-- 
