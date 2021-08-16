@@ -36,10 +36,10 @@
 
   
 ## Demo Video Link:
-  <a href="https://youtu.be/klDg0ZmR-rc">https://youtu.be/klDg0ZmR-rc</a>
+  <a href="https://youtu.be/klDg0ZmR-rc">Demo Link</a>
   
 ## Presentation Link:
-  <a href="https://docs.google.com/presentation/d/1hDrJ4dDie20ds_RUNivez1sBMxraHswHCpkc3Ex4CMg/edit?usp=sharing"> ppt link here </a>
+  <a href="https://docs.google.com/presentation/d/1hDrJ4dDie20ds_RUNivez1sBMxraHswHCpkc3Ex4CMg/edit?usp=sharing"> PPT Link </a>
   
   
 ## Table of Contents:
@@ -56,9 +56,11 @@
 ## Contributors:
 
 <!-- Team Name: Against Gravity -->
-* [Ashwini Pal](https://github.com/ashwiniswag)
-* [Gidijala Uday Srinu](https://github.com/udaysrinu)
 * [Ashutosh Kumar](https://github.com/waytoashutosh)
+* [Gidijala Uday Srinu](https://github.com/udaysrinu)
+* [Ashwini Pal](https://github.com/ashwiniswag)
+
+
 
 
 
