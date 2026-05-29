@@ -1,0 +1,50 @@
+flowchart TB
+    subgraph Mobile["Android app (Java, minSdk 21)"]
+        Login["LoginActivity<br/>email/password"]
+        Patient["Patient flow<br/>PatientInfo, MedicalHistoryFragment,<br/>NewAppointment"]
+        Doctor["Doctor flow<br/>doctorarea.Dashboard,<br/>NewTreatmentBegin, FindDoctor"]
+        Models["Domain classes<br/>PatientClass, DoctorClass,<br/>AppointmentClass, Disease"]
+    end
+
+    subgraph Auth["Firebase (Google Cloud)"]
+        FAuth["Firebase Auth<br/>identity + sessions"]
+        FDB["Firebase Realtime DB<br/>profile cache, appointments,<br/>off-chain metadata"]
+    end
+
+    subgraph Bridge["Web3J bridge"]
+        W3J["org.web3j:core:4.6.0-android<br/>JSON-RPC client"]
+        ABI["Generated wrapper:<br/>contracts.Testcontract.java<br/>(from .abi + .bin)"]
+    end
+
+    subgraph Chain["Ethereum / Matic"]
+        RPC["Public JSON-RPC node<br/>(Infura / Matic Mumbai)"]
+        Contract["D_Health_Block.sol<br/>0x4fb7...3341<br/>Solidity ^0.8.3"]
+        Storage["On-chain state<br/>pMap, dMap,<br/>pDataList, dDataList"]
+    end
+
+    Login --> FAuth
+    FAuth --> Patient
+    FAuth --> Doctor
+
+    Patient --> Models
+    Doctor --> Models
+
+    Patient -->|profile, lookups| FDB
+    Doctor -->|profile, lookups| FDB
+
+    Patient -->|createPatient,<br/>getPatientData| ABI
+    Doctor -->|createDoctor,<br/>addPatientData,<br/>getDoctorData| ABI
+
+    ABI --> W3J
+    W3J -->|eth_call / eth_sendRawTransaction| RPC
+    RPC --> Contract
+    Contract --> Storage
+
+    classDef mobile fill:#e3f2fd,stroke:#1565c0,color:#000
+    classDef firebase fill:#fff3e0,stroke:#ef6c00,color:#000
+    classDef chain fill:#f3e5f5,stroke:#6a1b9a,color:#000
+    classDef bridge fill:#e8f5e9,stroke:#2e7d32,color:#000
+    class Login,Patient,Doctor,Models mobile
+    class FAuth,FDB firebase
+    class RPC,Contract,Storage chain
+    class W3J,ABI bridge
