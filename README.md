@@ -1,10 +1,22 @@
-# DHealth-Block
+<h1 align="center">Decentralised Health Block</h1>
 
-Decentralised Health Block — an Android app that stores patient/doctor medical history on an Ethereum smart contract, with Firebase for auth and off-chain metadata.
+<p align="center">
+  <a href="https://hack36.com"><img src="http://bit.ly/BuiltAtHack36" height="20px" alt="Built at Hack36"></a>
+</p>
 
-> 2021 final-year-style college blockchain project, originally built for [Hack36](https://hack36.com) by team "Against Gravity": [Ashutosh Kumar](https://github.com/waytoashutosh), [Gidijala Uday Srinu](https://github.com/udaysrinu), [Ashwini Pal](https://github.com/ashwiniswag).
->
-> This is **not a from-scratch blockchain in Java**. It is an Android dApp that talks to a single Solidity contract (`D_Health_Block`) on a public EVM chain (Matic / Ethereum testnet) via Web3J. The "block" in the name refers to the contract, not a hand-rolled chain.
+> 2021 college hackathon project, built for [Hack36](https://hack36.com) by team **Against Gravity**: [Ashutosh Kumar](https://github.com/waytoashutosh), [Gidijala Uday Srinu](https://github.com/udaysrinu), [Ashwini Pal](https://github.com/ashwiniswag).
+
+## The problem we picked
+
+In our daily lives we don't give much attention to our medical reports — they get lost in the dust of paper folders, hospital portals, and forgotten WhatsApp PDFs. And on the other side, doctors can't understand a patient holistically until they see the medical history of the past few years. The handoff between visits, between cities, between doctors is broken.
+
+We wanted to give patients and doctors a single, durable place for that history that no one party owns.
+
+## The solution we shipped
+
+An Android app that stores patient/doctor medical history on an Ethereum smart contract, with Firebase handling identity and off-chain metadata.
+
+> Important honesty note: this is **not a from-scratch blockchain in Java**. It is an Android dApp that talks to a single Solidity contract (`D_Health_Block`) on a public EVM chain (Matic / Ethereum testnet) via Web3J. The "block" in the name refers to the contract, not a hand-rolled chain.
 
 ## What it does
 
@@ -108,6 +120,20 @@ Honest caveats — this is a hackathon-grade project, not production:
 - **Centralisation in disguise**: Firebase Auth + Firebase Realtime DB is a single Google-controlled point of failure. Calling the system "decentralised" is a stretch when the login layer is fully centralised.
 - **51% / small-network attacks**: not directly relevant since the project rides on a public EVM, but if you redeploy on a private chain with few validators this becomes a real concern.
 - **No data deletion / GDPR**: by design — chain data is immutable. Real-world health records have a right-to-be-forgotten requirement.
+
+## What we wanted to build but didn't ship
+
+Hackathon-style, the team scoped down to what we could demo. The original feature list included things we marked "to be implemented" and never got to:
+
+- **Decentralised rating system** — patients rate doctors on the network. The rating itself would live on-chain, with one rating per `(patient, doctor)` pair to prevent ballot stuffing.
+- **"Find doctors near you, sorted by rating"** — combine the rating system with geolocation so patients pick the best-rated doctor nearby.
+
+We also discussed (but never started) a **Future Goals — Machine Learning Features** track:
+
+1. Predict next likely diagnosis from a patient's disease history — to give the next doctor a heads-up about emerging risks.
+2. Suggest medicines a doctor might consider, given the patient's full medical timeline.
+
+The ML side was always going to be the hard part: it requires aggregating across patients (privacy), training without leaking individual records (federated learning, differential privacy), and producing recommendations that are auditable (regulatory reality of clinical software). We didn't get past the idea stage, but it's worth noting these were on the roadmap.
 
 ## License
 
